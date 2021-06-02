@@ -1,0 +1,71 @@
+
+  <!DOCTYPE html>
+  <html>
+  <head>
+	<style type="text/css"></style>
+  <title>Welcome To Login Form</title>
+   </head>
+
+	<body bgcolor="sayan">
+	<!-- Main div code -->
+	<div id="main">
+	<div class="h-tag">
+	<h2>Welcome To My Account Login</h2>
+	</div>
+	<!-- Login box -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Enter User Name :</td>
+	<td><input type="text" placeholder="Enter user name here" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Enter Password :</td>
+	<td><input type="password" placeholder="Enter Password here" id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Reset" onclick="clearFunc()" class="btn" />
+	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+	</tr>
+	</table>
+	</div>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+    <script> 
+		function login()
+		{
+			var uname = document.getElementById("email").value;
+			var pwd = document.getElementById("pwd1").value;
+			
+			if(uname =='')
+			{
+				alert("please enter user name.");
+			}
+			else if(pwd=='')
+			{
+				alert("enter the password");
+			}
+			else if(pwd.length < 4 || pwd.length > 15)
+			{
+				alert("Password min length is 4 and max length is 15.");
+			}
+			else if(uname=='admin' && pwd=='admin')
+			{
+		alert('Thank You for Login & You are Redirecting to Website');
+	  //Redirecting to other page or webste code or you can set your own html page.
+		   window.location = "http://localhost:4200/employee";
+				}
+		}
+		//Reset Inputfield code.
+		function clearFunc()
+		{
+			document.getElementById("email").value="";
+			document.getElementById("pwd1").value="";
+		}	
+		</script>
+  </body>
+  </html>
+  
