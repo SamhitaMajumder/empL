@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 export class EmployeeService {
 
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'https:virtserver.swaggerhub.com/employee4/employee/1.0.0/inventory';
 
   constructor(private http: HttpClient) { }
 
